@@ -1,0 +1,26 @@
+{
+  "name": "angular-tutos",
+  "directory": "public/components",
+  "version": "0.0.0",
+  "description": "angularjs tutorial",
+  "keywords": [
+    "angular"
+  ],
+  "authors": [
+    "mobtech"
+  ],
+  "license": "MIT",
+  "homepage": "www.mobtech.com.mx",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.4",
+    "bootstrap": "~3.3.1"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Tutorial</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/listadetareas.css">
+</head>
+<body>
+    <div>
+        <label>Nombre:</label>
+        <input type="text" placeholder="Escribe tu nombre" ng-model="nombre" />
+        <input type="text" placeholder="Color" ng-model="color" />
+        <hr>
+        <h3 class="text-{{ color}}">Hola, {{ nombre }}!</h3>
+    </div>
+    <h2 class="well">TUS PENDIENTES</h2>
+    <div ng-controller="ControladorTareas">
+        <span>{{restantes()}} de {{tareas.length}}</span>
+        <ul class="unstyled">
+        [ <a class="text-danger" href="" ng-click="eliminar()">eliminar</a> ]
+            <li ng-repeat="tarea in tareas">
+                <input type="checkbox" ng-model="tarea.hecho">
+                <span class="hecho-{{tarea.hecho}}">{{tarea.texto}}</span>
+            </li>
+        </ul>
+        <form ng-submit="agregarTarea()">
+            <input type="text" size="20" size="30" placeholder="Agregar una nueva tarea" ng-model="textoNuevaTarea">
+            <button class="btn btn-primary" type="submit">Agregar</button>
+        </form>
+    </div>
+</body>
+    <!-- Lastest compiled and minified AngularJS -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <!-- Custom Angular Controllers -->
+    <script src="js/listadetareas.js"></script>
+</html>

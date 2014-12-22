@@ -1,0 +1,11 @@
+.hecho-true {
+    color: grey;
+    text-decoration: line-through;
+    font-style: italic;
+}
+.hecho-false {
+    background-color: #d0e4fe;
+    color: red;
+    font-style: bold;
+    text-decoration: none;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Directivas</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-app="directivaSimple">
+
+    <div ng-controller="Controlador">
+        <div class="container">
+                <!-- Pasas valor de texto1 del Controlador padre
+                    como parametro a nuestra Directiva -->
+                <mi-encabezado texto="texto1"></mi-encabezado>
+                <!-- elemento reusable de html -->
+                <mi-encabezado texto="texto2"></mi-encabezado>
+        </div>
+    </div>
+
+</body>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/directivas.js"></script>
+</html>

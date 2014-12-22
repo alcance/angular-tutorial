@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario en AngularJS</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-app>
+<div class="container">
+    <h1>Formulario de AngularJS</h1>
+    <hr>
+
+    <form role="form" name="forma">
+        <div class="form-group" ng-class="{'has-error': forma.nombreU.$invalid, 'has-success': forma.nombreU.$valid}">
+            <label for="inputNombre">Nombre</label>
+            <input id="inputNombre" type="text" class="form-control" placeholder="Ingresa tu nombre" name="nombreU" ng-model="usuario.nombre" required>
+        </div>
+        <div class="form-group" ng-class="{'has-error': forma.emailU.$invalid, 'has-sucess': form.emailU.$valid}">
+            <label for="inputEmail">Correo electrónico</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Ingresa un correo electrónico válido" name="emailU" ng-model="usuario.email" required>
+            <!-- cuando el campo de correo sea invalido muestra los mensajes-->
+            <div ng-show="forma.emailU.$dirty && forma.emailU.$invalid">
+                <p class="help-block text-danger" ng-show="forma.emailU.$error.required">Campo obligatorio</p>
+                <p class="help-block text-danger" ng-show="forma.emailU.$error.email">Correo electrónico inválido</p>
+            </div>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="aceptoU" ng-model="usuario.acepto" required> Acepto
+            </label>
+        </div>
+        <button class="btn btn-success" ng-disabled="forma.$invalid">Registrar</button>
+    </form>
+
+    <hr>
+    <span class="lead text-primary"></span>
+</div>
+</body>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.27/i18n/angular-locale_es-mx.js"></script>
+</html>

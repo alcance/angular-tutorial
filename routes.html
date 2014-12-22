@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Admnistración</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/listadetareas.css">
+
+</head>
+<body ng-app="panelApp">
+
+<nav class="navbar navbar-default" role="navigation">
+
+    <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Desplegar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">Menú</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="#/empleados/">Empleados</a></li>
+            <li><a href="#/tareas/">Tareas</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+
+<div class="container">
+    <div ng-view></div>
+</div>
+</body>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.27/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.27/i18n/angular-locale_es-mx.js"></script>
+    <script src="js/listaRutas.js"></script>
+</html>
